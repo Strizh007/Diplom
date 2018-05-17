@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="264.0" prefWidth="318.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <AnchorPane fx:id="menuDoor" maxHeight="-1.0" maxWidth="-1.0" prefHeight="264.0" prefWidth="317.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TextField layoutX="14.0" layoutY="27.0" />
+            <TextField layoutX="14.0" layoutY="52.0" />
+            <TextField layoutX="14.0" layoutY="77.0" />
+            <Button fx:id="btnOK" layoutX="123.0" layoutY="172.0" mnemonicParsing="false" text="OK" />
+            <Button fx:id="btnCancl" layoutX="178.0" layoutY="172.0" mnemonicParsing="false" onAction="#closeButtonExit" text="Отмена" />
+            <Label layoutX="180.0" layoutY="31.0" text="Длина,*см" />
+            <Label layoutX="178.0" layoutY="56.0" text="Толщина,*см" />
+            <Label layoutX="181.0" layoutY="106.0" text="Материал" />
+            <Label layoutX="181.0" layoutY="81.0" text="Высота,*см" />
+            <ChoiceBox fx:id="choiceMat" layoutX="14.0" layoutY="102.0" prefWidth="150.0">
+               <contextMenu>
+                  <ContextMenu fx:id="contextMat" onAction="#openBoxMat">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Древесина" />
+                        <MenuItem mnemonicParsing="false" text="Метал" />
+                        <MenuItem mnemonicParsing="false" text="Пластик" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></ChoiceBox>
+            <ChoiceBox fx:id="choicePosit" layoutX="14.0" layoutY="127.0" prefWidth="150.0">
+               <contextMenu>
+                  <ContextMenu fx:id="contextPosit" onAction="#openBoxPosit">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Открыто" />
+                        <MenuItem mnemonicParsing="false" text="Закрыто" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></ChoiceBox>
+            <Label layoutX="184.0" layoutY="131.0" prefHeight="17.0" prefWidth="85.0" text="Положение" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
